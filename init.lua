@@ -14,9 +14,6 @@ local config = {
         plugins = {
                 init = {
                         { "lervag/vimtex" },
-                        {
-                                "simrat39/rust-tools.nvim",
-                        },
                 },
                 ["neo-tree"] = {
                         filesystem = {
@@ -28,14 +25,14 @@ local config = {
         },
         mappings = {
                 n = {
-                        ["<F12>"] = function() require("rust-tools").inlay_hints.enable() end,
+                        ["<F11>"] = function() vim.api.nvim_command("@a") end,
                 },
         },
         lsp = {
-                clangd = {
-                        server = {
-                                capabiblities = {
-                                        offsetEncoding = "utf-8"
+                ["server-settings"] = {
+                        clangd = {
+                                capabilities = {
+                                        offsetEncoding = "utf-8",
                                 },
                         },
                 },
