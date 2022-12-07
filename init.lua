@@ -13,6 +13,7 @@ local config = {
         -- set vim options here (vim.<first_key>.<second_key> =  value)
         plugins = {
                 init = {
+                        "catppuccin/nvim",
                         { "lervag/vimtex" },
                 },
                 ["neo-tree"] = {
@@ -23,6 +24,7 @@ local config = {
                         }
                 },
         },
+        colorscheme = "catppuccin",
         mappings = {
                 n = {
                         ["<F11>"] = function() vim.api.nvim_command("@a") end,
@@ -44,6 +46,7 @@ local config = {
         },
         options = function(local_vim)
                 local_vim.opt.relativenumber = true
+                local_vim.opt.wrap = false
                 vim.api.nvim_command('set nohlsearch')
                 return local_vim
         end,
