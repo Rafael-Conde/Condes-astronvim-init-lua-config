@@ -16,6 +16,10 @@
       {
         "language":"ino",
         "path": "./arduino.json"
+      },
+      {
+        "language":"rust",
+        "path":"./rust.json"
       }
     ]
   }
